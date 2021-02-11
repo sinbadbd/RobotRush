@@ -34,7 +34,8 @@ public class RobotController : MonoBehaviour
     //what layer is concidered ground
     public LayerMask whatIsGround;
 
-
+    //Double jump
+    bool doubleJump = false;
 
     void Start()
     {
@@ -46,6 +47,11 @@ public class RobotController : MonoBehaviour
 
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
         anim.SetBool("Ground", grounded);
+
+        if (grounded)
+            doubleJump = false;
+
+
         anim.SetFloat("vSpeed", GetComponent<Rigidbody2D>().velocity.y);
 
 
@@ -71,11 +77,14 @@ public class RobotController : MonoBehaviour
 
     private void Update()
     {
-        if(grounded && Input.GetKeyDown(KeyCode.Space))
+        if((grounded || !doubleJump) && Input.GetKeyDown(KeyCode.Space))
         {
             // not on the ground
             anim.SetBool("Ground", false);
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+
+            if (!doubleJump && !grounded)
+                doubleJump = true;
         }
     }
 
