@@ -15,6 +15,27 @@ public class RobotController : MonoBehaviour
     // get reference to animator
     Animator anim;
 
+
+    // not grounded
+    bool grounded = false;
+
+    // touching the ground
+    public Transform groundCheck;
+
+    // how big circele is going to be when we check distance to the ground
+    float groundRadius = 0.2f;
+
+
+    // fource the jump
+    public float jumpForce = 700f;
+
+
+
+    //what layer is concidered ground
+    public LayerMask whatIsGround;
+
+
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -22,6 +43,12 @@ public class RobotController : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+        anim.SetBool("Ground", grounded);
+        anim.SetFloat("vSpeed", GetComponent<Rigidbody2D>().velocity.y);
+
+
         //get move direction
         float move = Input.GetAxis("Horizontal");
 
@@ -29,7 +56,7 @@ public class RobotController : MonoBehaviour
 
 
         //
-        anim.SetFloat("speed", Mathf.Abs(move));
+        anim.SetFloat("Speed", Mathf.Abs(move));
 
 
 
@@ -42,6 +69,15 @@ public class RobotController : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(grounded && Input.GetKeyDown(KeyCode.Space))
+        {
+            // not on the ground
+            anim.SetBool("Ground", false);
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+        }
+    }
 
     void flip()
     {
