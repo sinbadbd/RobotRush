@@ -1207,9 +1207,10 @@ GameObject:
   m_Component:
   - component: {fileID: 137700985}
   - component: {fileID: 137700984}
+  - component: {fileID: 137700986}
   m_Layer: 0
   m_Name: Acid (2)
-  m_TagString: Untagged
+  m_TagString: Acid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1272,12 +1273,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137700983}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.3993287, y: -13.154362, z: 32.377586}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7.3993287, y: -13.164, z: 32.377586}
+  m_LocalScale: {x: 1, y: 0.9925384, z: 1}
   m_Children: []
   m_Father: {fileID: 1923435386}
   m_RootOrder: 78
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!253 &137700986
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137700983}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: 0
+  m_Density: 0.4
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
 --- !u!1 &144288132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,9 +2676,10 @@ GameObject:
   m_Component:
   - component: {fileID: 323443863}
   - component: {fileID: 323443862}
+  - component: {fileID: 323443864}
   m_Layer: 0
   m_Name: Acid (3)
-  m_TagString: Untagged
+  m_TagString: Acid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2721,12 +2742,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323443861}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.686329, y: -10.595727, z: 32.377586}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 9.686329, y: -10.624, z: 32.377586}
+  m_LocalScale: {x: 1, y: 0.9925384, z: 1}
   m_Children: []
   m_Father: {fileID: 1923435386}
   m_RootOrder: 81
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!253 &323443864
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323443861}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: 0
+  m_Density: 0.4
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
 --- !u!1 &327600151
 GameObject:
   m_ObjectHideFlags: 0
@@ -4528,9 +4568,10 @@ GameObject:
   m_Component:
   - component: {fileID: 578945960}
   - component: {fileID: 578945959}
+  - component: {fileID: 578945961}
   m_Layer: 0
   m_Name: Acid (4)
-  m_TagString: Untagged
+  m_TagString: Acid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4593,12 +4634,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578945958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.973629, y: -13.154362, z: 32.377586}
-  m_LocalScale: {x: 1.0119225, y: 1, z: 1}
+  m_LocalPosition: {x: 9.973629, y: -13.164, z: 32.377586}
+  m_LocalScale: {x: 1.0119225, y: 0.9925384, z: 1}
   m_Children: []
   m_Father: {fileID: 1923435386}
   m_RootOrder: 79
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!253 &578945961
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578945958}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: 0
+  m_Density: 0.4
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
 --- !u!1 &595516083
 GameObject:
   m_ObjectHideFlags: 0
@@ -4842,9 +4902,11 @@ GameObject:
   m_Component:
   - component: {fileID: 701668391}
   - component: {fileID: 701668390}
+  - component: {fileID: 701668393}
+  - component: {fileID: 701668394}
   m_Layer: 0
   m_Name: Acid (1)
-  m_TagString: Untagged
+  m_TagString: Acid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4907,12 +4969,57 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701668389}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.3214684, y: -10.595727, z: 32.377586}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7.3214684, y: -10.624, z: 32.377586}
+  m_LocalScale: {x: 1, y: 0.9925384, z: 1}
   m_Children: []
   m_Father: {fileID: 1923435386}
   m_RootOrder: 80
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!253 &701668393
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701668389}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: 0
+  m_Density: 0.4
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
+--- !u!61 &701668394
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701668389}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.0543499, y: -1.8525789}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.6686993, y: 1.6652403}
+  m_EdgeRadius: 0
 --- !u!1001 &720228345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4979,6 +5086,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Saw (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875356841982434703, guid: da047d9863ef0426e9b7e7baef2d654b,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875356841982434703, guid: da047d9863ef0426e9b7e7baef2d654b,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.41038382
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875356841982434703, guid: da047d9863ef0426e9b7e7baef2d654b,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.3066038
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da047d9863ef0426e9b7e7baef2d654b, type: 3}
@@ -10131,7 +10253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topSpeed: 10
   groundCheck: {fileID: 1626463541}
-  jumpForce: 300
+  jumpForce: 200
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -11774,6 +11896,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Saw
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875356841982434703, guid: da047d9863ef0426e9b7e7baef2d654b,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.856273
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875356841982434703, guid: da047d9863ef0426e9b7e7baef2d654b,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.72169816
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875356841982434703, guid: da047d9863ef0426e9b7e7baef2d654b,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9622642
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da047d9863ef0426e9b7e7baef2d654b, type: 3}
@@ -13627,6 +13764,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Saw (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875356841982434703, guid: da047d9863ef0426e9b7e7baef2d654b,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.12904951
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875356841982434703, guid: da047d9863ef0426e9b7e7baef2d654b,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875356841982434703, guid: da047d9863ef0426e9b7e7baef2d654b,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.34390613
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da047d9863ef0426e9b7e7baef2d654b, type: 3}

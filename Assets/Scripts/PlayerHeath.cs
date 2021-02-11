@@ -31,12 +31,23 @@ public class PlayerHeath : MonoBehaviour
         {
             healthBar.value -= 5f;
             currentHealth = healthBar.value;
-        }   
+        }
+
+        if(collision.gameObject.tag == "Acid")
+        {
+            healthBar.value -= 2.5f;
+            currentHealth = healthBar.value;
+        }
+        if(collision.gameObject.tag == "Spike")
+        {
+            healthBar.value -= 3.5f;
+            currentHealth = healthBar.value;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthText.text = currentHealth.ToString() + '%';
+        healthText.text = currentHealth.ToString("no") + '%';
     }
 }
