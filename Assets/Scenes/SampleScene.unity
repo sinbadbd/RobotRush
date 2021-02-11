@@ -742,7 +742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topSpeed: 10
   groundCheck: {fileID: 1626463541}
-  jumpForce: 700
+  jumpForce: 300
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
