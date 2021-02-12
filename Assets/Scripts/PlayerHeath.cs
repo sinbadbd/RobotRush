@@ -48,6 +48,6 @@ public class PlayerHeath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.text = currentHealth.ToString("no") + '%';
+        healthText.text = currentHealth.ToString() + '%';
     }
 }
