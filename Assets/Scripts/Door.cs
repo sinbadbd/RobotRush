@@ -51,7 +51,7 @@ public class Door : MonoBehaviour
     }
 
 
-    void OpenDoor()
+   public void OpenDoor()
     {
         if (DoorType.name == "ExitDoor")
         {
