@@ -40,6 +40,7 @@ public class RobotController : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        anim.SetBool("isDead", false);
     }
 
     private void FixedUpdate()

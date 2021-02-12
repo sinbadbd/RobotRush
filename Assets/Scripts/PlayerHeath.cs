@@ -14,13 +14,18 @@ public class PlayerHeath : MonoBehaviour
     [SerializeField]
     Text healthText;
 
+    [SerializeField]
+    GameObject DeathUI;
 
     float maxHealth = 100;
     float currentHealth;
 
+    Animator anim;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
+
         healthBar.value = maxHealth;
         currentHealth = healthBar.value;
     }
@@ -49,5 +54,13 @@ public class PlayerHeath : MonoBehaviour
     void Update()
     {
         healthText.text = currentHealth.ToString() + '%';
+
+        if(currentHealth <= 0)
+        {
+            anim.SetBool("isDead", true);
+            GetComponent<RobotController>().enabled = false;
+
+            DeathUI.gameObject.SetActive(true);
+        }
     }
 }

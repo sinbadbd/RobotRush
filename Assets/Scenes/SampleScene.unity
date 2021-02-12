@@ -3721,7 +3721,7 @@ MonoBehaviour:
   XMaxEnable: 1
   XMaxValue: 49.1
   XMinEnable: 1
-  XMinValue: 8.49
+  XMinValue: 6.29
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -3924,6 +3924,7 @@ GameObject:
   - component: {fileID: 521391102}
   - component: {fileID: 521391103}
   - component: {fileID: 521391104}
+  - component: {fileID: 521391105}
   m_Layer: 0
   m_Name: EntryDoor
   m_TagString: Untagged
@@ -4014,6 +4015,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &521391105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521391101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf81a3e4f5e024b71953b5c48632c4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DoorType: {fileID: 521391101}
 --- !u!1 &534081927
 GameObject:
   m_ObjectHideFlags: 0
@@ -8633,6 +8647,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1139157954}
   - component: {fileID: 1139157955}
+  - component: {fileID: 1139157957}
+  - component: {fileID: 1139157956}
   m_Layer: 0
   m_Name: ExitDoor
   m_TagString: Untagged
@@ -8704,6 +8720,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1139157956
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139157953}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5fc029344802a453da2422bcdefbcb9a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1139157957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139157953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf81a3e4f5e024b71953b5c48632c4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DoorType: {fileID: 1139157953}
 --- !u!1 &1157364651
 GameObject:
   m_ObjectHideFlags: 0
