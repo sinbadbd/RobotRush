@@ -17055,11 +17055,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - clipName: action_theme
+  - audioMixerGroup: {fileID: -890199343648509779, guid: 6da26e6deb33b4419aec73a467c8ace9,
+      type: 2}
+    clipName: action_theme
     clip: {fileID: 8300000, guid: c10929f9e62054721a1b380855ba6418, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 841794651279938273, guid: 6da26e6deb33b4419aec73a467c8ace9,
+      type: 2}
+    clipName: action_trigger_switch
+    clip: {fileID: 8300000, guid: 173b16157caf646dfa8ea310fe653bd9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 841794651279938273, guid: 6da26e6deb33b4419aec73a467c8ace9,
+      type: 2}
+    clipName: saw running
+    clip: {fileID: 8300000, guid: e4b7b5917d44d4b92936d7c2618a7272, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
     playOnAwake: 0
 --- !u!1 &2059677599
 GameObject:
