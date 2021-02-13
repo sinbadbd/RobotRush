@@ -6,6 +6,9 @@ public class Switch : MonoBehaviour
 {
 
 
+    AudioManager audioManager;
+
+
     [SerializeField]
     GameObject switchOn;
 
@@ -16,7 +19,12 @@ public class Switch : MonoBehaviour
 
     void Start()
     {
+
+        audioManager = AudioManager.instance;
+
         gameObject.GetComponent<SpriteRenderer>().sprite = switchOff.GetComponent<SpriteRenderer>().sprite;
+
+
     }
 
 
@@ -25,5 +33,7 @@ public class Switch : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().sprite = switchOn.GetComponent<SpriteRenderer>().sprite;
 
         isOn = true;
+
+        audioManager.PlaySound("action_trigger_switch");
     }
 }
