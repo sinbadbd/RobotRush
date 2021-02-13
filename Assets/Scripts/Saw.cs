@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class Saw : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    AudioManager audioManager;
 
     float sawSpeed = 300;
 
     void Start()
     {
-        
+        audioManager = AudioManager.instance;
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Rotate(0, 0, sawSpeed * Time.deltaTime);
+        audioManager.PlaySound("saw running");
     }
 }
