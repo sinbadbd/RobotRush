@@ -105,17 +105,33 @@ public class Menu : MonoBehaviour
     }
 
 
-    public void SetSFXVolume(float sfxlv)
+    public void setMasterVolume(float masterV)
     {
-        audioManager.setSFXVolume(sfxlv);
+        audioManager.setMasterVolume(masterV);
     }
-    public void SerMusicVolume(float musicV)
+    public void setMusicVolume(float musicV)
     {
         audioManager.setMusicVolume(musicV);
     }
 
-    public void SerMasterVolume(float masterV)
+
+    public void setSFXVolume(float sfxV)
     {
-        audioManager.setMasterVolume(masterV);
+        audioManager.setSFXVolume(sfxV);
     }
+
+
+    //public void SetSFXVolume(float sfxlv)
+    //{
+    //    audioManager.setSFXVolume(sfxlv);
+    //}
+    //public void SerMusicVolume(float musicV)
+    //{
+    //    audioManager.setMusicVolume(musicV);
+    //}
+
+    //public void SerMasterVolume(float masterV)
+    //{
+    //    audioManager.setMasterVolume(masterV);
+    //}
 }

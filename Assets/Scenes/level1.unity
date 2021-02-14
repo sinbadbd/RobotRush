@@ -202,7 +202,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1828814}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054268084}
+        m_MethodName: BackButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1828814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +333,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7667774}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054268084}
+        m_MethodName: BackButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7667774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,7 +754,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 22390685}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054268084}
+        m_MethodName: DispalayOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &22390685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1686,7 +1719,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 107628376}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054268084}
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &107628376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4416,7 +4460,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 415260143}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054268084}
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &415260143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13433,7 +13488,18 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054268084}
+        m_MethodName: setSFXVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1355539616
 GameObject:
   m_ObjectHideFlags: 0
@@ -14087,7 +14153,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420111332}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -14114,6 +14180,8 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
+  maxSlideTime: 1.5
+  healthController: {fileID: 0}
 --- !u!114 &1420111340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14378,7 +14446,18 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054268084}
+        m_MethodName: setMasterVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1463376756
 GameObject:
   m_ObjectHideFlags: 0
@@ -15291,7 +15370,18 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054268084}
+        m_MethodName: setMusicVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1596661768
 GameObject:
   m_ObjectHideFlags: 0
@@ -17941,7 +18031,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1817620946}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054268080}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1817620946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18277,7 +18378,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1836032746}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054268084}
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1836032746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20762,13 +20874,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d99b09e890247c5800088853f01ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: 6da26e6deb33b4419aec73a467c8ace9, type: 2}
   sounds:
   - audioMixerGroup: {fileID: -890199343648509779, guid: 6da26e6deb33b4419aec73a467c8ace9,
       type: 2}
     clipName: action_theme
     clip: {fileID: 8300000, guid: c10929f9e62054721a1b380855ba6418, type: 3}
-    volume: 1
+    volume: 0.594
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -20776,7 +20888,7 @@ MonoBehaviour:
       type: 2}
     clipName: action_trigger_switch
     clip: {fileID: 8300000, guid: 173b16157caf646dfa8ea310fe653bd9, type: 3}
-    volume: 1
+    volume: 0.713
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -20784,7 +20896,7 @@ MonoBehaviour:
       type: 2}
     clipName: saw running
     clip: {fileID: 8300000, guid: e4b7b5917d44d4b92936d7c2618a7272, type: 3}
-    volume: 1
+    volume: 0.584
     pitch: 1
     loop: 1
     playOnAwake: 0

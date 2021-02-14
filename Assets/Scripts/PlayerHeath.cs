@@ -18,7 +18,8 @@ public class PlayerHeath : MonoBehaviour
     GameObject DeathUI;
 
     float maxHealth = 100;
-    float currentHealth;
+
+    public float currentHealth;
 
     Animator anim;
 

@@ -37,6 +37,18 @@ public class RobotController : MonoBehaviour
     //Double jump
     bool doubleJump = false;
 
+
+
+
+    //slide down
+    bool sliding = false;
+    float slideTimer = 0f;
+    public float maxSlideTime = 1.5f;
+
+    [SerializeField]
+    GameObject healthController;
+
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -78,7 +90,13 @@ public class RobotController : MonoBehaviour
 
     private void Update()
     {
-        if((grounded || !doubleJump) && Input.GetKeyDown(KeyCode.Space))
+        GetInputMovement();
+    }
+
+
+    public void GetInputMovement()
+    {
+        if ((grounded || !doubleJump) && Input.GetKeyDown(KeyCode.Space))
         {
             // not on the ground
             anim.SetBool("Ground", false);
@@ -86,9 +104,36 @@ public class RobotController : MonoBehaviour
 
             if (!doubleJump && !grounded)
                 doubleJump = true;
+
+        }
+        else if (!grounded || doubleJump && Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetBool("doubleJumping", doubleJump);
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow) && !sliding)
+        {
+            slideTimer = 0f;
+
+            anim.SetBool("isSliding", true);
+            gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+            healthController.GetComponent<CapsuleCollider2D>().enabled = false;
+
+            sliding = true;
+        }
+
+        if (sliding)
+        {
+            slideTimer += Time.deltaTime;
+            if (slideTimer > maxSlideTime)
+            {
+                sliding = false;
+                anim.SetBool("isSliding", false);
+                gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+                healthController.GetComponent<CapsuleCollider2D>().enabled = true;
+            }
         }
     }
-
     void flip()
     {
         facingRight = !facingRight;
