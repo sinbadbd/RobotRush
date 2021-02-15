@@ -160,7 +160,7 @@ public class RobotController : MonoBehaviour
         if (Input.GetButtonUp("Fire1"))
         {
             anim.SetBool("isShooting", false);
-            anim.SetBool("isShooting_running", true);
+            anim.SetBool("isShooting_running", false);
         }
         if (Input.GetButtonDown("Fire1") && GetComponent<Rigidbody2D>().velocity.x > 0) {
             anim.SetBool("isShooting_running", true);
