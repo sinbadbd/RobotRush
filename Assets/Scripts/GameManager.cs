@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Text switchCount;
 
-
+    public static GameManager gm;
    
     void Start()
     {
@@ -30,6 +30,15 @@ public class GameManager : MonoBehaviour
 
     }
 
+     void Awake()
+    {
+        gm = this;
+    }
+
+    public int getCurrentLevel()
+    {
+        return SceneManager.GetActiveScene().buildIndex;
+    }
 
     public void LoadNextLavel(int x)
     {
