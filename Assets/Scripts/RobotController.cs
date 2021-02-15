@@ -49,8 +49,18 @@ public class RobotController : MonoBehaviour
     GameObject healthController;
 
 
+    // BULLET
+
+    public Transform muzzle;
+    public GameObject bullet;
+
+
+    AudioManager audioManager;
+
+
     void Start()
     {
+        audioManager = AudioManager.instance;
         anim = GetComponent<Animator>();
         anim.SetBool("isDead", false);
     }
@@ -133,6 +143,29 @@ public class RobotController : MonoBehaviour
                 healthController.GetComponent<CapsuleCollider2D>().enabled = true;
             }
         }
+
+
+        if (Input.GetButtonDown("Fire1")){
+            GameObject mBullet = Instantiate(bullet, muzzle.position, muzzle.rotation);
+
+            audioManager.PlaySound("gun-shot");
+            mBullet.transform.parent = GameObject.Find("GameManager").transform;
+            mBullet.GetComponent<Renderer>().sortingLayerName = "Player";
+
+            anim.SetBool("isShooting", true);
+
+        }
+
+
+        if (Input.GetButtonUp("Fire1"))
+        {
+            anim.SetBool("isShooting", false);
+            anim.SetBool("isShooting_running", true);
+        }
+        if (Input.GetButtonDown("Fire1") && GetComponent<Rigidbody2D>().velocity.x > 0) {
+            anim.SetBool("isShooting_running", true);
+        }
+
     }
     void flip()
     {

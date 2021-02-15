@@ -4073,7 +4073,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &373744732
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14008,6 +14008,7 @@ GameObject:
   - component: {fileID: 1420111338}
   - component: {fileID: 1420111339}
   - component: {fileID: 1420111340}
+  - component: {fileID: 1420111341}
   m_Layer: 8
   m_Name: Robot
   m_TagString: Player
@@ -14023,10 +14024,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420111332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.71, y: -0.39, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 1626463541}
+  - {fileID: 1618608258}
   m_Father: {fileID: 1323337344}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14069,7 +14071,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: df46a7a1c6b56427a9a7069b5a93912c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 625339f7902d944a280ec5eab36ae10f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14106,7 +14108,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420111332}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -14182,6 +14184,8 @@ MonoBehaviour:
     m_Bits: 4294967295
   maxSlideTime: 1.5
   healthController: {fileID: 0}
+  muzzle: {fileID: 1618608258}
+  bullet: {fileID: 4882012965003232400, guid: 219a21d894a974af8a56d0b0754c619f, type: 3}
 --- !u!114 &1420111340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14197,6 +14201,23 @@ MonoBehaviour:
   healthBar: {fileID: 1805913947}
   healthText: {fileID: 1426645520}
   DeathUI: {fileID: 2059677599}
+  currentHealth: 0
+--- !u!70 &1420111341
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420111332}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.23272455, y: 0}
+  m_Size: {x: 2.7842286, y: 4.739107}
+  m_Direction: 0
 --- !u!1 &1426645518
 GameObject:
   m_ObjectHideFlags: 0
@@ -15679,6 +15700,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613328282}
   m_CullTransparentMesh: 0
+--- !u!1 &1618608257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1618608258}
+  m_Layer: 8
+  m_Name: Muzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1618608258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618608257}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.05, y: -0.21, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1420111333}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1626463540
 GameObject:
   m_ObjectHideFlags: 0
