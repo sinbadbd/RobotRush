@@ -11656,7 +11656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoorType: {fileID: 1139157953}
-  nextLevel: 2
+  nextLevel: 1
 --- !u!61 &1139157958
 BoxCollider2D:
   m_ObjectHideFlags: 0

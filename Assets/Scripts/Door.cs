@@ -19,6 +19,9 @@ public class Door : MonoBehaviour
 
     void Start()
     {
+
+        gm = FindObjectOfType<GameManager>();
+
         anim = GetComponent<Animator>();
 
         if(DoorType.name == "EntryDoor")
