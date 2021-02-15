@@ -37,8 +37,30 @@ public class RobotController : MonoBehaviour
     //Double jump
     bool doubleJump = false;
 
+
+
+
+    //slide down
+    bool sliding = false;
+    float slideTimer = 0f;
+    public float maxSlideTime = 1.5f;
+
+    [SerializeField]
+    GameObject healthController;
+
+
+    // BULLET
+
+    public Transform muzzle;
+    public GameObject bullet;
+
+
+    AudioManager audioManager;
+
+
     void Start()
     {
+        audioManager = AudioManager.instance;
         anim = GetComponent<Animator>();
         anim.SetBool("isDead", false);
     }
@@ -78,7 +100,13 @@ public class RobotController : MonoBehaviour
 
     private void Update()
     {
-        if((grounded || !doubleJump) && Input.GetKeyDown(KeyCode.Space))
+        GetInputMovement();
+    }
+
+
+    public void GetInputMovement()
+    {
+        if ((grounded || !doubleJump) && Input.GetKeyDown(KeyCode.Space))
         {
             // not on the ground
             anim.SetBool("Ground", false);
@@ -86,9 +114,59 @@ public class RobotController : MonoBehaviour
 
             if (!doubleJump && !grounded)
                 doubleJump = true;
-        }
-    }
 
+        }
+        else if (!grounded || doubleJump && Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetBool("doubleJumping", doubleJump);
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow) && !sliding)
+        {
+            slideTimer = 0f;
+
+            anim.SetBool("isSliding", true);
+            gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+            healthController.GetComponent<CapsuleCollider2D>().enabled = false;
+
+            sliding = true;
+        }
+
+        if (sliding)
+        {
+            slideTimer += Time.deltaTime;
+            if (slideTimer > maxSlideTime)
+            {
+                sliding = false;
+                anim.SetBool("isSliding", false);
+                gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+                healthController.GetComponent<CapsuleCollider2D>().enabled = true;
+            }
+        }
+
+
+        if (Input.GetButtonDown("Fire1")){
+            GameObject mBullet = Instantiate(bullet, muzzle.position, muzzle.rotation);
+
+            audioManager.PlaySound("gun-shot");
+            mBullet.transform.parent = GameObject.Find("GameManager").transform;
+            mBullet.GetComponent<Renderer>().sortingLayerName = "Player";
+
+            anim.SetBool("isShooting", true);
+
+        }
+
+
+        if (Input.GetButtonUp("Fire1"))
+        {
+            anim.SetBool("isShooting", false);
+            anim.SetBool("isShooting_running", true);
+        }
+        if (Input.GetButtonDown("Fire1") && GetComponent<Rigidbody2D>().velocity.x > 0) {
+            anim.SetBool("isShooting_running", true);
+        }
+
+    }
     void flip()
     {
         facingRight = !facingRight;
