@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
+
+    public Menu menu;
+
     [SerializeField]
     GameObject PauseObject;
 
@@ -19,8 +22,21 @@ public class Menu : MonoBehaviour
     AudioManager audioManager;
 
 
-    enum MenuStates { playing, Pause, Option, Help }
+    enum MenuStates { playing, Pause, Option, Help,Dead, mainMenu }
     MenuStates currentStates;
+
+    void Awake()
+    {
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            currentStates = MenuStates.mainMenu;
+        }else
+        {
+            currentStates = MenuStates.playing;
+        }
+
+        menu = this;
+    }
 
     private void Update()
     {
@@ -38,6 +54,15 @@ public class Menu : MonoBehaviour
 
         switch (currentStates)
         {
+            case MenuStates.mainMenu:
+                currentStates = MenuStates.mainMenu;
+                PauseObject.SetActive(true);
+                OptionsWindow.SetActive(false);
+                HelpWindow.SetActive(false);
+                MenuUI.SetActive(true);
+                break;
+
+
             case MenuStates.playing:
                 currentStates = MenuStates.playing;
                 PauseObject.SetActive(false);
@@ -120,6 +145,11 @@ public class Menu : MonoBehaviour
         audioManager.setSFXVolume(sfxV);
     }
 
+
+    public void StartNewGame()
+    {
+        SceneManager.LoadScene(1);
+    }
 
     //public void SetSFXVolume(float sfxlv)
     //{
