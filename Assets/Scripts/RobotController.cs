@@ -57,7 +57,7 @@ public class RobotController : MonoBehaviour
 
     AudioManager audioManager;
 
-
+ 
     void Start()
     {
         audioManager = AudioManager.instance;
@@ -176,4 +176,6 @@ public class RobotController : MonoBehaviour
 
         transform.localScale = theScale;
     }
+
+  
 }

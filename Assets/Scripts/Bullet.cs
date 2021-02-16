@@ -26,6 +26,6 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, GetComponent<Rigidbody2D>().velocity.y);
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 2f);
     }
 }
