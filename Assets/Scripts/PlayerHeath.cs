@@ -17,8 +17,9 @@ public class PlayerHeath : MonoBehaviour
     [SerializeField]
     GameObject DeathUI;
 
-    float maxHealth = 100;
-    float currentHealth;
+    public float maxHealth = 100;
+
+    public float currentHealth;
 
     Animator anim;
 

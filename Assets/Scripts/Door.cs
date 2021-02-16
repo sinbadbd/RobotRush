@@ -12,8 +12,16 @@ public class Door : MonoBehaviour
 
     int stateOfDoor = 1;
 
+
+    public int nextLevel;
+
+    GameManager gm;
+
     void Start()
     {
+
+        gm = FindObjectOfType<GameManager>();
+
         anim = GetComponent<Animator>();
 
         if(DoorType.name == "EntryDoor")
@@ -28,7 +36,14 @@ public class Door : MonoBehaviour
         }
     }
 
-  
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        print("next level====");
+        if (GetDoorState() == 3)
+        {
+            gm.LoadNextLavel(nextLevel);
+        }
+    }
 
     void LockDoor()
     {

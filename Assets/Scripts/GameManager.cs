@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,12 +21,44 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Text switchCount;
 
+    public static GameManager instance;
+   
     void Start()
     {
 
         GetNoOfSwitch();
 
     }
+
+     void Awake()
+    {
+
+        if (instance == null)
+        {
+            instance = this;
+        }else if(instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public int getCurrentLevel()
+    {
+        return SceneManager.GetActiveScene().buildIndex;
+    }
+
+    public void LoadNextLavel(int x)
+    {
+        SceneManager.LoadScene(x);
+    }
+
+
+    public void LoadLastSave(int x)
+    {
+        SceneManager.LoadScene(x);
+    }
+
+
 
 
     public int GetNoOfSwitch()
